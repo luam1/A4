@@ -3,79 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações - Locadora de Filmes</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 300px;
-        }
-        h1 {
-            text-align: center;
-            color: #ff4500;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="text"], input[type="password"], select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #555;
-            background-color: #444;
-            color: #fff;
-        }
-        button {
-            margin-top: 20px;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #ff4500;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #e03e00;
-        }
-    </style>
+    <title>Aluguel de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Configurações</h1>
-        <form>
-            <label for="username">Nome de Usuário:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <label for="language">Idioma:</label>
-            <select id="language" name="language">
-                <option value="pt">Português</option>
-                <option value="en">Inglês</option>
-                <option value="es">Espanhol</option>
-            </select>
-            
-            <button type="submit">Salvar Configurações</button>
-        </form>
-    </div>
+    <header>
+        <div class="logo">Aluguel de Filmes</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Minha Conta</a>
+            <a href="#">Carrinho</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Ajuda</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao Aluguel de Filmes</h1>
+        <section class="destaques">
+            <h2>Destaques</h2>
+            <!-- Lista de filmes em destaque -->
+        </section>
+        <section class="novidades">
+            <h2>Novidades</h2>
+            <!-- Lista de lançamentos -->
+        </section>
+        <section class="recomendacoes">
+            <h2>Recomendações</h2>
+            <!-- Lista de recomendações personalizadas -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aluguel de Filmes. Todos os direitos reservados.</p>
+        <p>Siga-nos: [links para redes sociais]</p>
+    </footer>
 </body>
 </html>
