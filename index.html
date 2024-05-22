@@ -3,41 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluguel de Filmes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Informações do Filme</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #333;
+            border-radius: 8px;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .details {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button.default {
+            background-color: #444;
+            color: white;
+        }
+        button.primary {
+            background-color: #007bff;
+            color: white;
+        }
+        button.success {
+            background-color: #28a745;
+            color: white;
+        }
+        button.info {
+            background-color: #17a2b8;
+            color: white;
+        }
+        button.warning {
+            background-color: #ffc107;
+            color: black;
+        }
+        button.danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        button.light {
+            background-color: #f8f9fa;
+            color: black;
+        }
+        button.dark {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Aluguel de Filmes</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Minha Conta</a>
-            <a href="#">Carrinho</a>
-            <a href="#">Sobre Nós</a>
-            <a href="#">Ajuda</a>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Bem-vindo ao Aluguel de Filmes</h1>
-        <section class="destaques">
-            <h2>Destaques</h2>
-            <!-- Lista de filmes em destaque -->
-        </section>
-        <section class="novidades">
-            <h2>Novidades</h2>
-            <!-- Lista de lançamentos -->
-        </section>
-        <section class="recomendacoes">
-            <h2>Recomendações</h2>
-            <!-- Lista de recomendações personalizadas -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Aluguel de Filmes. Todos os direitos reservados.</p>
-        <p>Siga-nos: [links para redes sociais]</p>
-    </footer>
+    <div class="container">
+        <div class="title">Título do Filme</div>
+        <div class="details">
+            <p><strong>Diretor:</strong> Nome do Diretor</p>
+            <p><strong>Ano:</strong> 2024</p>
+            <p><strong>Gênero:</strong> Ação, Aventura</p>
+            <p><strong>Sinopse:</strong> Este é um resumo breve do enredo do filme, destacando os principais acontecimentos e personagens.</p>
+        </div>
+        <div class="buttons">
+            <button class="default">Default</button>
+            <button class="primary">Primary</button>
+            <button class="success">Success</button>
+            <button class="info">Info</button>
+            <button class="warning">Warning</button>
+            <button class="danger">Danger</button>
+            <button class="light">Light</button>
+            <button class="dark">Dark</button>
+        </div>
+    </div>
 </body>
 </html>
