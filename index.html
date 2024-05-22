@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações do Filme</title>
+    <title>Locação de Filmes</title>
     <style>
         body {
             background-color: black;
@@ -36,36 +36,20 @@
             cursor: pointer;
             font-size: 14px;
         }
-        button.default {
-            background-color: #444;
+        button.rent {
+            background-color: #ff0000;
             color: white;
         }
-        button.primary {
-            background-color: #007bff;
+        button.favorite {
+            background-color: #ff0000;
             color: white;
         }
-        button.success {
-            background-color: #28a745;
+        button.stream {
+            background-color: #ff0000;
             color: white;
         }
-        button.info {
-            background-color: #17a2b8;
-            color: white;
-        }
-        button.warning {
-            background-color: #ffc107;
-            color: black;
-        }
-        button.danger {
-            background-color: #dc3545;
-            color: white;
-        }
-        button.light {
-            background-color: #f8f9fa;
-            color: black;
-        }
-        button.dark {
-            background-color: #343a40;
+        button.report {
+            background-color: #ff0000;
             color: white;
         }
     </style>
@@ -80,15 +64,29 @@
             <p><strong>Sinopse:</strong></p>
         </div>
         <div class="buttons">
-            <button class="default">Default</button>
-            <button class="primary">Primary</button>
-            <button class="success">Success</button>
-            <button class="info">Info</button>
-            <button class="warning">Warning</button>
-            <button class="danger">Danger</button>
-            <button class="light">Light</button>
-            <button class="dark">Dark</button>
+            <button class="rent" onclick="rentMovie()">Alugar Filme</button>
+            <button class="favorite" onclick="markFavorite()">Marcar como Favorito</button>
+            <button class="stream" onclick="streamMovie()">Transmitir</button>
+            <button class="report" onclick="reportMovie()">Denunciar</button>
         </div>
     </div>
+
+    <script>
+        function rentMovie() {
+            alert("Filme alugado com sucesso!");
+        }
+
+        function markFavorite() {
+            alert("Filme marcado como favorito!");
+        }
+
+        function streamMovie() {
+            alert("Iniciando transmissão do filme!");
+        }
+
+        function reportMovie() {
+            alert("Filme denunciado!");
+        }
+    </script>
 </body>
 </html>
