@@ -3,108 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Página de Login</title>
     <style>
         body {
-            background-color: #000000;
-            background-size: cover; 
-            background-position: center; 
-            height: 800px; 
-            width: 100%;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000000;
-            color: #fff;
-            padding: 5px;
-            text-align: center;
-        }
-        nav {
-            background-color: #000000;
-            padding: 5px;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #000000;
-            color: #aa0000;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .mobile-bar {
-            background-color: #333;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px 0;
+            background-color: #f0f0f0;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            z-index: 9999;
+            height: 100vh;
+            margin: 0;
         }
-        .mobile-bar-item {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
-        .mobile-bar-item:hover {
-            background-color: #555;
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="conteiner">
-           <div class="button"> 
-                   <a onclick="window.location.href='menu.html'"><img src="https://us.123rf.com/450wm/lililia/lililia1711/lililia171100498/90663989-vector-flat-icon-of-the-menu-on-black-background.jpg?ver=6" height="50" width="150"></a> 
-                   <a onclick="window.location.href='confg.html'"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/18965506-eps10-icone-abstrato-de-botao-de-compartilhamento-de-branco-ou-logotipo-isolado-em-fundo-preto-simbolo-de-compartilhamento-em-um-estilo-moderno-simples-e-moderno-para-o-design-do-seu-site-e-aplicativo-movel-vetor.jpg" height="50" width="150"></a>
-                   <a onclick="window.location.href='busca.html'"><img src="https://cdn.pixabay.com/photo/2023/04/03/21/31/star-7897931_1280.png" height="50" width="150"></a>
-                   <a onclick="window.location.href='historico.html'"><img src="https://i.pinimg.com/736x/e4/aa/ea/e4aaeaa23844ea0f489b1237b9bb1352.jpg" alt="" height="50" width="150"></a>
-           </div>
-       </div>
-    </header>
-    <nav>
-       
-    </nav>
-<section>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+        </div>
+        <div class="form-group">
+            <button onclick="login()">Entrar</button>
+        </div>
+    </div>
 
-<section id="formulario">
-    <form action="/submit-form" method="post">
-        <label for="nome"><font color="#ffffff">Nome:</font><font color="#000000">....</font></label>
-        <input type="text" id="nome" name="nome"><br><br>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-        <label for="email"><font color="#ffffff">Email:</font><font color="#000000">.....</font></label>
-        <input type="email" id="email" name="email"><br><br>
+            if (username && password) {
+                // Simulate a login process and store user information in local storage
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password); // Note: storing passwords in local storage is not recommended for real applications.
+                alert('Login bem-sucedido!');
+                // Redirecionar para a página principal ou outra página após o login
+                window.location.href = 'pagina_principal.html';
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
 
-        <label for="mensagem"><font color="#ffffff">Mensagem:</font></label>
-        <textarea id="mensagem" name="mensagem"></textarea><br><br>
-
-        <font color="#
-ffffff"><fieldset>
-            <legend>Preferências</legend>
-            <label><input type="radio" name="contato" value="email"> Email</label><br>
-            <label><input type="radio" name="contato" value="telefone"> Telefone</label><br>
-            <label><input type="checkbox" name="novidades" value="sim"> Quero receber novidades</label><br>
-        </fieldset>
-
-        <input type="submit" value="Enviar"></font>
-    </form>
-</section>
-
-</section>
-    <footer>
-
-    </footer>
+        // Verifica se o usuário já está logado
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const username = localStorage.getItem('username');
+            if (username) {
+                alert(`Bem-vindo de volta, ${username}!`);
+                // Redirecionar para a página principal ou outra página
+                window.location.href = 'pagina_principal.html';
+            }
+        });
+    </script>
 </body>
 </html>
